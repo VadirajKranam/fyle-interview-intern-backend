@@ -1,1 +1,2 @@
 -- Write query to get number of graded assignments for each student:
+select students.user_id,count(*)  from students left join assignments on students.user_id=assignments.student_id group by students.user_id having assignments.state='GRADED'
